@@ -1,4 +1,4 @@
-# spin
+# Spin Code Challenge
 
 Aplicación de wallet/banca simulada construida con Next.js, React y TypeScript como code challenge para Spin.
 
