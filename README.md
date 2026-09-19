@@ -42,8 +42,8 @@ http://localhost:3000
 
 Para entrar a la aplicación, usa cualquiera de estas credenciales mock:
 
-- `test.user@spin.com`
-- El número de celular proporcionado en la pantalla de login
+- `test.user@spin.com` ó
+- 526622985745
 
 ## Scripts Disponibles
 
