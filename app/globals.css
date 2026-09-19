@@ -1,0 +1,195 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+    --radius-card-lg: 28px;
+    --radius-card-xl: 32px;
+    --color-app-background-start: #30236f;
+    --color-app-background-mid: #4f2aaa;
+    --color-app-background-end: #241d5a;
+    --color-overlay-white-soft: rgb(255 255 255 / 0.16);
+    --color-brand-primary: #531bc8;
+    --color-brand-primary-rgb: 83 27 200;
+    --color-brand-primary-strong: #4a17b3;
+    --color-brand-accent: #f60;
+    --color-brand-accent-rgb: 255 102 0;
+    --color-brand-accent-strong: #ff7a1a;
+    --color-status-success-rgb: 34 197 94;
+    --color-status-error-rgb: 239 68 68;
+    --color-status-error-soft-rgb: 248 113 113;
+    --color-status-error-strong-rgb: 254 202 202;
+    --color-status-warning-rgb: 252 211 77;
+    --color-status-warning-strong-rgb: 254 243 199;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    background:
+      radial-gradient(circle at 18% 10%, rgb(255 255 255 / 0.14), transparent 34%),
+      radial-gradient(circle at top, rgb(var(--color-brand-primary-rgb) / 0.56), transparent 46%),
+      radial-gradient(circle at 85% 18%, rgb(var(--color-brand-accent-rgb) / 0.34), transparent 34%),
+      linear-gradient(180deg, var(--color-app-background-start) 0%, var(--color-app-background-mid) 52%, var(--color-app-background-end) 100%);
+  }
+
+  body {
+    min-height: 100vh;
+    margin: 0;
+    font-family: Inter, "Segoe UI", sans-serif;
+    @apply text-slate-100 antialiased;
+  }
+
+  button,
+  input,
+  select {
+    font: inherit;
+  }
+
+  body::selection {
+    background: rgb(var(--color-brand-primary-rgb) / 0.3);
+  }
+}
+
+@layer utilities {
+  .bg-app-shell {
+    background:
+      radial-gradient(circle at 16% 10%, rgb(255 255 255 / 0.12), transparent 34%),
+      radial-gradient(circle at top, rgb(var(--color-brand-primary-rgb) / 0.52), transparent 48%),
+      radial-gradient(circle at 80% 20%, rgb(var(--color-brand-accent-rgb) / 0.3), transparent 34%),
+      linear-gradient(180deg, var(--color-app-background-start) 0%, var(--color-app-background-mid) 52%, var(--color-app-background-end) 100%);
+  }
+
+  .brand-hero-glow {
+    background: linear-gradient(
+      90deg,
+      rgb(var(--color-brand-primary-rgb) / 0.2) 0%,
+      transparent 55%,
+      rgb(var(--color-brand-accent-rgb) / 0.12) 100%
+    );
+  }
+
+  .brand-surface-primary {
+    border-color: rgb(var(--color-brand-primary-rgb) / 0.2);
+    background-color: rgb(var(--color-brand-primary-rgb) / 0.1);
+  }
+
+  .brand-surface-primary-strong {
+    border-color: rgb(var(--color-brand-primary-rgb) / 0.2);
+    background-color: rgb(var(--color-brand-primary-rgb) / 0.15);
+  }
+
+  .brand-surface-accent {
+    background-color: rgb(var(--color-brand-accent-rgb) / 0.15);
+  }
+
+  .brand-glow-primary {
+    background-color: rgb(var(--color-brand-primary-rgb) / 0.15);
+  }
+
+  .brand-glow-accent {
+    background-color: rgb(var(--color-brand-accent-rgb) / 0.12);
+  }
+
+  .brand-gradient {
+    background: linear-gradient(90deg, var(--color-brand-primary) 0%, var(--color-brand-accent) 100%);
+  }
+
+  .brand-gradient-hover:hover {
+    background: linear-gradient(90deg, var(--color-brand-primary-strong) 0%, var(--color-brand-accent-strong) 100%);
+  }
+
+  .brand-text-accent {
+    color: var(--color-brand-accent);
+    transition: color 150ms ease;
+  }
+
+  .brand-text-accent:hover {
+    color: var(--color-brand-accent-strong);
+  }
+
+  .brand-hover-border-primary:hover {
+    border-color: rgb(var(--color-brand-primary-rgb) / 0.25);
+  }
+
+  .brand-hover-border-primary-strong:hover {
+    border-color: rgb(var(--color-brand-primary-rgb) / 0.4);
+  }
+
+  .brand-hover-bg-primary:hover {
+    background-color: rgb(var(--color-brand-primary-rgb) / 0.08);
+  }
+
+  .brand-hover-bg-white:hover {
+    background-color: var(--color-overlay-white-soft);
+  }
+
+  .glass-panel {
+    @apply border border-white/20 bg-white/10 backdrop-blur-xl;
+  }
+
+  .field-input {
+    @apply w-full rounded-2xl border border-white/10 bg-slate-950/60 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-300;
+  }
+
+  .field-input:focus {
+    border-color: rgb(var(--color-brand-primary-rgb) / 0.7);
+    box-shadow: 0 0 0 2px rgb(var(--color-brand-primary-rgb) / 0.3);
+  }
+
+  .primary-button {
+    @apply inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-violet-950/20 transition disabled:cursor-not-allowed disabled:from-slate-700 disabled:to-slate-700 disabled:text-slate-300;
+    background: linear-gradient(90deg, var(--color-brand-primary) 0%, var(--color-brand-accent) 100%);
+  }
+
+  .primary-button:hover {
+    background: linear-gradient(90deg, var(--color-brand-primary-strong) 0%, var(--color-brand-accent-strong) 100%);
+  }
+
+  .secondary-button {
+    @apply inline-flex items-center justify-center rounded-2xl border border-white/10 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .secondary-button:hover {
+    border-color: rgb(var(--color-brand-primary-rgb) / 0.25);
+    background-color: var(--color-overlay-white-soft);
+  }
+
+  .status-error-text {
+    color: rgb(var(--color-status-error-soft-rgb));
+  }
+
+  .status-error-text-strong {
+    color: rgb(var(--color-status-error-strong-rgb));
+  }
+
+  .status-error-surface {
+    border-color: rgb(var(--color-status-error-rgb) / 0.2);
+    background-color: rgb(var(--color-status-error-rgb) / 0.1);
+  }
+
+  .status-success-surface {
+    background-color: rgb(var(--color-status-success-rgb) / 0.18);
+  }
+
+  .status-warning-surface {
+    border-color: rgb(var(--color-status-warning-rgb) / 0.2);
+    background-color: rgb(var(--color-status-warning-rgb) / 0.1);
+  }
+
+  .status-warning-text {
+    color: rgb(var(--color-status-warning-strong-rgb));
+  }
+
+  .brand-spinner {
+    border-top-color: var(--color-brand-primary);
+  }
+
+  .status-dot {
+    @apply inline-block h-2.5 w-2.5 rounded-full;
+  }
+}
