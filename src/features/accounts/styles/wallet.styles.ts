@@ -4,6 +4,7 @@ export const accountBalanceCardStyles = {
   content: "relative",
   title: "text-sm uppercase tracking-[0.26em] text-slate-200",
   amount: "mt-4 text-4xl font-semibold tracking-[-0.06em] text-white sm:text-5xl",
+  amountCurrency: "ml-2 text-sm uppercase tracking-[0.22em] text-slate-200 align-middle",
 } as const;
 
 export const walletHeaderStyles = {

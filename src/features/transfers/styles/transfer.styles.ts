@@ -32,6 +32,7 @@ export const transferScreenStyles = {
   asideTitle: "mt-3 text-2xl font-semibold text-white",
   asideSubtitle: "mt-2 text-sm text-slate-300",
   balanceTitle: "mt-3 text-4xl font-semibold tracking-[-0.05em] text-white",
+  balanceCurrency: "ml-2 text-sm uppercase tracking-[0.22em] text-slate-200 align-middle",
   balanceHint: "mt-3 text-sm leading-6 text-slate-300",
   activityTitle: "text-lg font-semibold text-white",
   qaDescription: "mt-2 text-sm leading-6 text-slate-300",
