@@ -11,6 +11,7 @@ export function AccountBalanceCard({ availableBalance }: AccountBalanceCardProps
           <p className={accountBalanceCardStyles.title}>Saldo disponible</p>
           <h2 className={accountBalanceCardStyles.amount}>
             {formatCurrency(availableBalance)}
+            <span className={accountBalanceCardStyles.amountCurrency}>MXN</span>
           </h2>
         </div>
       </div>

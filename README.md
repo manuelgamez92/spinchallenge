@@ -112,3 +112,7 @@ Simulación de escenarios de transferencia:
 - Para demos de QA, también puedes sobrescribir la bandera en `localStorage` con `spin.wallet.feature-flags`
 
 
+## Tiempo invertido
+
+Le dedique alrededor de 3 horas para desarrollar el code challenge.
+

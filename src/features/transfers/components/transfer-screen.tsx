@@ -501,6 +501,7 @@ export function TransferScreen() {
             <p className={transferScreenStyles.overline}>Saldo actual</p>
             <h3 className={transferScreenStyles.balanceTitle}>
               {formatCurrency(accountQuery.data?.availableBalance ?? 0)}
+              <span className={transferScreenStyles.balanceCurrency}>MXN</span>
             </h3>
             <p className={transferScreenStyles.balanceHint}>
               Las reglas de negocio impiden confirmar montos cero, negativos o mayores al saldo.
